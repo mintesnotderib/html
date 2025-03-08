@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <input id="v1" type="number" min="1" max="10" required>
+ <p id="demo"></p>
+ <button onclick="validity1()">click here</button>
+<a href="go.html">go to the other htmll</a>
+
+ <script>
+  let x=document.getElementById("demo");
+  let y=document.getElementById("v1");
+  function validity1(){
+if(y.validity.rangeOverflow)
+{
+ x.innerHTML=" the number you enterd is above the range ";
+}
+else if (y.validity.rangeUnderflow)
+{
+ x.innerHTML="you enter the minumem number"
+}
+else{
+ x.innerHTML="you enterd the rigth number";
+}
+  }
+ </script>
+</body>
+</html>

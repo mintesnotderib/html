@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  button{
+   padding: 10px;
+   background-color: green;
+  }
+ </style>
+</head>
+<body>
+ <button onclick="storage()">see</button>
+ <p id="demo"></p>
+ <p id="demo1"></p>
+ <script>
+  function storage(){
+   let x=document.getElementById("demo")
+   if(typeof(Storage)!=="undefined"){
+  localStorage.setItem("name","mintesnot")
+  x.innerHTML=localStorage.getItem("name")}
+ else{
+  x.innerHTML="sorry you browser doesnot support storage web api"
+ }}
+
+ let z=document.getElementById("demo1")
+ sessionStorage.setItem("lastName","Derib")
+ z.innerHTML=sessionStorage.getItem("lastName")
+ </script>
+</body>
+</html>

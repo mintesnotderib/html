@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  button{
+   background-color: green;
+   color:white;
+   padding:5px;
+   text-align:center;
+  }
+ </style>
+</head>
+<body>
+ <div id="demo">
+  <h1>this is intro to Ajax</h1>
+  <button onclick="load()">see the effect</button>
+ </div>
+ <script>
+  function load(){
+   const x=new XMLHttpRequest;
+   x.onload=function(){
+    document.getElementById("demo").innerHTML=this.responseText;
+   }
+   x.open("GET","fetch.txt")
+   x.send();
+  }
+ </script>
+</body>
+</html>

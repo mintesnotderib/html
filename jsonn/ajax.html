@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Fetch a JSON file with Fetch API</h2>
+<p id="demo"></p>
+
+<script>
+// Use the fetch API to get the JSON file
+fetch('json_demo.txt')
+  .then(response => response.json())  // Convert the response to JSON
+  .then(myObj => {
+    document.getElementById("demo").innerHTML = myObj.name;
+  })
+  .catch(error => {
+    console.error("Error fetching JSON:", error);  // Catch any errors
+  });
+</script>
+
+</body>
+</html>

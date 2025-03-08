@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <p id="demo"></p>
+ <script>
+  const x=["mintesnot","solomon","getachew"];
+  const myJson=JSON.stringify(x);
+  localStorage.setItem("myText",myJson)
+  
+
+  localStorage.getItem("myText")
+  myjson=JSON.parse(myJson)
+  document.getElementById("demo").innerHTML=myjson;
+ </script>
+ 
+</body>
+</html>

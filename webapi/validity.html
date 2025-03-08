@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+   button{
+   padding: 10px;
+   background-color: green;
+  }
+ </style>
+</head>
+<body>
+ 
+  <input type="number" id="num" min="0" max="100" required>
+  <p id="p1"></p>
+  <button onclick="valid1()">Enter</button>
+ 
+ <script>
+  let valid=document.getElementById("num")
+  let view=document.getElementById("p1");
+  function valid1(){
+
+  if(valid.checkValidity()){
+view.innerHTML="You enter the valid input";
+  }
+  else{
+   view.innerHTML=valid.validationMessage;
+  }}
+ </script>
+</body>
+</html>

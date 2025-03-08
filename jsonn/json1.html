@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <p id="demo"></p>
+ <p id="demo2"></p>
+ <script>
+  let text=document.getElementById("demo");
+  const txt='{"name":"mintesnot","age":20,"date":"2005,04,13"}'
+  const reciver=JSON.parse(txt);
+  reciver.date=new Date(reciver.date)
+text.innerHTML=reciver.date;
+
+
+const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+const myJSON = JSON.stringify(obj);
+document.getElementById("demo2").innerHTML = myJSON;
+
+
+<!-- const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+obj.age = obj.age.toString();
+const myJSON = JSON.stringify(obj); to show function unless it doesn't work-->
+</script>
+</body>
+</html>
