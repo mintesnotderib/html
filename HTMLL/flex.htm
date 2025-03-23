@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  *{
+   box-sizing:border-box
+  }
+  body{
+   margin:0;
+  }
+  .container{
+   display:flex;
+   flex-wrap:wrap;/*nowrap property not break the flow and wrap-reverse*/
+   background-color: rgb(245, 245, 196);
+   flex-direction: row;/*collumn,column-reverse,row-reverse*/
+   flex-flow:row wrap;/*to express dir and wrap*/
+   justify-content: space-between;/*in the x-axisis*/
+   align-items: stretch;
+
+   
+  }
+  .container >div{
+   flex:20%;
+   height: 100px;
+   background-color: green;
+   margin:10px;
+   text-align: center;
+   padding-top:3vh;
+   font-size: larger;
+   color:white;
+   
+  }
+  @media (max-width:600px){
+   .container{
+    flex-flow: column wrap;
+   }
+   .container >div{
+    flex: 100%;
+   }
+   
+  }
+ </style>
+</head>
+<body>
+ <div class="container">
+  <div style="order:2;flex-grow:1;">I</div>
+  <div style="order:4;flex-grow:1;">T</div>
+  <div style="order:3;flex-grow:1;">N</div>
+  <div style="order:1;flex-grow:1;">M</div>
+  <div style="order:5;flex-grow:8;">E</div>
+  
+  
+  
+ </div>
+</body>
+</html>

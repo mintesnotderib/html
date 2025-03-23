@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <video id="vid" src="inter.mp4" width="400px" height="200px" controls autoplay muted></video>
+ <button onclick="play()">Play/pause</button>
+ <button onclick="big()">Wide</button>
+ <button ondblclick="small()">Minmize</button><br>
+ <iframe width="420" height="345" src="https://youtu.be/syrZ2IeOKKA?si=l8nheIA-5t7R9rzp">
+</iframe>
+ <script>
+  var myvid=document.getElementById("vid");
+  function play(){
+   if(myvid.paused){
+myvid.play();
+   }
+   else{
+    myvid.pause()
+   }
+  }
+  function big(){
+   myvid.width=600;
+  }
+  function small(){
+   myvid.width=200;
+  }
+ </script>
+</body>
+</html>

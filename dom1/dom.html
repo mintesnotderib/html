@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #container {
+            padding: 10px;
+            border: 2px solid black;
+            width: 300px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1 id="life">hey</h1>
+    <h2>JavaScript DOM Manipulation</h2>
+<button onclick="myfun()">click it</button>
+    <button onclick="createElement()">Create Element</button>
+    <button onclick="removeElement()">Remove Element</button>
+    <button onclick="appendElement()">Append Element</button>
+    <button onclick="replaceElement()">Replace Element</button>
+    <button onclick="writeToDocument()">Write to Document</button>
+
+    <div id="container">
+        <p id="oldElement">I am the old element.</p>
+    </div>
+
+    <script>
+       function createElement() {
+    let container = document.getElementById("container");
+    
+    let newElement = document.createElement("p");
+    newElement.innerHTML = "Newly created paragraph!";
+    newElement.style.color = "blue"; // Make it visible
+    newElement.style.fontWeight = "bold"; // Bold text
+    newElement.id = "createdPara"; // Assign an ID for debugging
+    
+    container.appendChild(newElement);
+}
+
+        
+
+        function removeElement() {
+            let element = document.getElementById("oldElement");
+            if (element) {
+                element.parentNode.removeChild(element);
+            } else {
+                alert("Element already removed!");
+            }
+        }
+
+        function appendElement() {
+            let container = document.getElementById("container");
+            let newPara = document.createElement("p");
+            newPara.innerHTML = "Appended paragraph!";
+            container.appendChild(newPara);
+        }
+
+        function replaceElement() {
+            let container = document.getElementById("container");
+            let newElement = document.createElement("p");
+            newElement.innerHTML = "I am the new element!";
+            let oldElement = document.getElementById("oldElement");
+            if (oldElement) {
+                container.replaceChild(newElement, oldElement);
+            } else {
+                alert("No old element to replace!");
+            }
+        }
+
+        function writeToDocument() {
+            document.write("<h3>This text is written using document.write()</h3>");
+        }
+
+function myfun(){
+
+let zente=document.getElementById("life");
+zente.innerHTML=document.head;
+
+}
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <form name="form1" action="https://httpbin.org/get" onsubmit="myfun()">
+  <input type="text" name="fname" placeholder="mintesnot" id="fname" oninput="upperCase()"><br>
+  <input type="text" name="lname" placeholder="Derib" id="lname" onchange="upperCase2()">
+  <input type="submit" value="submit">
+ </form>
+<script>
+ function myfun(){
+ const x=document.forms["form1"]["fname"].value;
+ if(x=="")
+ alert("you must fill this input")}
+let x=document.getElementById("fname");
+ const upperCase=()=>{
+  x.value=x.value.toUpperCase();
+ }
+ 
+let y=document.getElementById("lname");
+ const upperCase2=()=>{
+  y.value=y.value.toUpperCase();
+ }
+
+</script>
+</body>
+</html>

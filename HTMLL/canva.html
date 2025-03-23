@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <canvas id="mycan" width="400" height="200" style="border:1px solid black;"></canvas><br>
+  <canvas id="mycan2" width="400" height="200" style="border:1px solid black;"></canvas><br>
+  <canvas id="mycan3" width="400" height="200" style="border:1px solid black;"></canvas><br>
+  <canvas id="mycan4" width="400" height="200" style="border:1px solid black;"></canvas><br>
+ 
+ <script>
+  let c=document.getElementById("mycan");
+  let ctx=c.getContext("2d");
+  ctx.moveTo(0,0);
+  ctx.lineTo(400,200);
+  ctx.stroke();
+  let d=document.getElementById("mycan2");
+  ctx=d.getContext("2d");
+  ctx.beginPath();
+  ctx.arc(200,100,100,0,2*Math.PI)
+ ctx.stroke();
+ let e=document.getElementById("mycan3");
+  ctx=e.getContext("2d");
+  ctx.font="50px Arial";
+  ctx.strokeText("MINTESNOT",70,80);
+  let f=document.getElementById("mycan4");
+  ctx=f.getContext("2d");
+  var graduent=ctx.createLinearGradient(0,0,100,150);
+  graduent.addColorStop(0,"green");
+  graduent.addColorStop(0.20,"yellow");
+  graduent.addColorStop(0.40,"red");
+  graduent.addColorStop(0.60,"blue");
+  graduent.addColorStop(0.80,"white");
+  graduent.addColorStop(1,"black");
+  ctx.fillStyle=graduent;
+  ctx.fillRect(10,10,200,100)
+ </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Event Handlers</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #222;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: cyan;
+            color: black;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Click the Button to See Multiple Handlers</h2>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        const button = document.getElementById("myButton");
+
+        // First event handler
+        button.addEventListener("click", function() {
+            alert("Handler 1: Button clicked!");
+        });
+
+        // Second event handler
+        button.addEventListener("click", function() {
+            console.log("Handler 2: This will log in the console.");
+        });
+
+        // Third event handler
+        button.addEventListener("click", function() {
+            document.body.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        });
+
+        // Fourth event handler (Named function)
+        function logTime() {
+            console.log("Handler 4: Click event at " + new Date().toLocaleTimeString());
+        }
+        button.addEventListener("click", logTime);
+    </script>
+
+</body>
+</html>

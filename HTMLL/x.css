@@ -1,0 +1,54 @@
+.st{
+ position:relative;
+ left:30px;
+ border:1px solid black;
+ text-transform: capitalize;
+}
+h2{
+ position: fixed;
+ top:0;
+ border:1px solid black;
+ left:0;
+}
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+.stick{
+ position:sticky;
+ top:0;
+}
+.intro{
+ border:2px solid black;
+ position: relative;
+}
+.intro>div{
+ border: 1px solid green;
+}
+.intro1{
+ position: absolute;
+ width:40%;
+ left:100px;
+ height:80px;
+ top:-10px;
+ background-color: brown;
+ z-index: 3;
+
+}
+.intro2{
+ position: absolute;
+ left:150px;
+ width:50%;
+ top:40px;
+ background-color: aquamarine;
+ z-index:2;
+}
+.intro3{
+ position: absolute;
+ left:40px;
+ height: 100px;
+ background-color: blue;
+ z-index:1;
+}

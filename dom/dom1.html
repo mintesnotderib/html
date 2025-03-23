@@ -13,14 +13,14 @@
  <p class="intro ">hello mintesnot</p>
  <p class="intro">hello Zente</p>
  <p id="demo"></p>
- <form action="https://httpbin.org/post" id="for"></form>
+ <form name="form1" action="https://httpbin.org/post" id="for"></form>
  First Name:<input type="text" name="fname" id="fn" value="doonald">
 last Name:<input type="text" name="lname" id="ln" value="trump">
 <p id="demo1"></p>
 <script>
  let x =document.querySelectorAll("p.intro");
 document.getElementById("demo").innerHTML=x[0].innerHTML+" how are you";
-let y=document.forms["for"];
+let y=document.forms["form1"]["fname"].value;
 let text=" ";
 for(let i=0;i<y.length;i++){
 text+=y.elements[i].value+"<br>"

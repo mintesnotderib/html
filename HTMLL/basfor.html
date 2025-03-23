@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+  *{
+   box-sizing: border-box;
+  }
+  form{
+   background: rgb(230, 225, 225);
+   padding:20px;
+  }
+  input[type="text"]{
+   background-color: rgb(10, 251, 10);
+   width:20%;
+   transition:width 1s ease-in-out;
+   height: 20px;
+   padding:10px;
+   margin:5px 0px 10px 10px;
+   border:1px solid black;
+   border-radius:3px;
+    color:white;
+  }
+  #bn{
+   background-color: greenyellow;
+   width:100px;
+   padding:5px;
+   margin:5px 10px 0px 0px;
+  }
+  input:focus{
+   box-shadow: 0px 0px 4px 0.3 black;
+   width:100%;
+  }
+ #se{
+  padding:20px 0px 20px 45px;
+  background-image: url("/imag/search.jpg");
+  background-position: left top;
+  background-size:40px 40px;
+  background-repeat: no-repeat;
+  background-color: rgb(223, 239, 239);
+  color: black;
+  font-weight: bold;
+ }
+ </style>
+</head>
+<body>
+ <form action="minte.www.com" method="get" validate>
+  <label for="fn">First Name</label><br>
+  <input type="text" id="fn" name="firstname" placeholder="your name"><br>
+  <label for="ln">Last Name</label><br>
+  <input type="text" id="ln" name="lasstname" placeholder="your last name"><br>
+  <label for="bn">Country</label><br>
+ <select name="country" id="bn">
+  <option value="ethiopia">Ethiopia</option>
+  <option value="madagascar">Madagascar</option>
+  <option value="dijbouti">Dijbouti</option>
+ </select>
+ <br><br><br>
+ <input type="text" name="search" placeholder="search..." id="se">
+ </form>
+</body>
+</html>

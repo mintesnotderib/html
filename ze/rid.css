@@ -1,0 +1,63 @@
+*{
+ box-sizing: border-box;
+}
+body{
+ margin:0;
+}
+
+.container{
+ display:grid;
+ grid-template-columns: 100px 100px 100px 100px ;
+ grid-template-rows: 80px 100px 60px;
+ background-color: rgb(241, 230, 230);
+ gap:10px;
+ justify-content: space-between;
+ height:500px;
+ border:1px solid black;
+ align-content:space-between;
+ place-content: center center;/*align-content 
+ + justify-content*/
+}
+.container>div{
+ background-color: green;
+ color:white;
+ text-align:center;
+}
+.e{
+ grid-area:1/2/3/4;
+}
+
+
+.cont{
+ display: grid;
+ background-color: rgb(237, 237, 237);
+ grid-template-areas:'myArea myArea myArea . .';
+ gap:10px;
+ grid-template-rows: 100px 100px 100px ;
+}
+.cont>div{
+ background-color: green;
+ color:white;
+ text-align: center;
+ padding-top:40px;
+}
+.Q{
+ grid-area: myArea;
+}
+.ont{
+ display: grid;
+ background-color: rgb(237, 237, 237);
+ grid-template-areas:'myArea1 myArea1 . .'
+ 'myArea1 myArea1 . .';
+ gap:10px;
+ grid-template-rows: 100px 100px 100px ;
+}
+.mn{
+ grid-area: myArea1;
+}
+.ont>div{
+ background-color: green;
+ color:white;
+ text-align: center;
+ padding-top:40px;
+}
